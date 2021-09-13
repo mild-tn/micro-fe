@@ -1,0 +1,8 @@
+{
+  "h1": "ตัวอย่าง",
+  "change-locale": "Change locale",
+  "to-second-page": "To second page",
+  "error-with-status": "A {{statusCode}} error occurred on server",
+  "error-without-status": "An error occurred on the server",
+  "title": "บ้าน | เปลี่ยนภาษา"
+}
