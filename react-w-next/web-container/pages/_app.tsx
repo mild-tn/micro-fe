@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Fragment>
       <Head>
-        <title>KSS | MOD LINK 2</title>
+        <title>Web Container</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/icons/core/layouts/kmutt_logo.svg"></link>
       </Head>
