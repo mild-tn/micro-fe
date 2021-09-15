@@ -4,7 +4,7 @@
 
 #### Description:
 
-1. `package` folder is example of build Microfrontends as a react with react. I'm studying from [Microfrontends with React: A Complete Developer's Guide](https://www.udemy.com/course/microfrontend-course/)
+1. `package` folder is example of build Microfrontends as a react with react. I'm studying [Microfrontends with React: A Complete Developer's Guide](https://www.udemy.com/course/microfrontend-course/)
 2. `react-w-next` is example of build Microfrontends as a react with next (It's just an experiment.). I try to make component is a ui lib and can share component to host app (web container) for develop.
 
 #### Resource
