@@ -1,15 +1,14 @@
 import React, { ReactChild } from 'react';
+import { PrimaryProps } from './button_type';
+import '../../styles/tailwind.css';
 
-interface PrimaryProps {
-  children?: ReactChild;
-}
-
-const Primary = ({ children }: PrimaryProps) => {
+const Primary = ({ children, onClick }: PrimaryProps) => {
   return (
-    <button className="h-[48px] w-[130px] px-10 bg-red-500 rounded">
+    <button
+      onClick={() => onClick && onClick()}
+      className="min-h-[48px] w-[130px] px-10 bg-red-800 rounded"
+    >
       {children}
-      <p className="text-lg text-blue-500">Mild</p>
-      <p className="text-lg text-red-900">Hello</p>
     </button>
   );
 };
