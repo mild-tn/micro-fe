@@ -1,30 +1,20 @@
 const { i18n } = require("./next-i18next.config");
 
-const { withModuleFederation } = require("@module-federation/nextjs-mf");
-
 module.exports = {
   i18n,
+  webpack5: true,
   webpack: (config, options) => {
-    const mfConf = {
-      name: "web-container",
-      library: {
-        type: config.output.libraryTarget,
-        name: "web-container",
-      },
-      remotes: {
-        components: "components",
-      },
-      exposes: {},
-    };
-    config.cache = false;
-    withModuleFederation(config, options, mfConf);
+    const { ModuleFederationPlugin } = options.webpack.container;
 
-    return config;
-  },
+    config.plugins.push(
+      new ModuleFederationPlugin({
+        remotes: {
+          components: "components@http://localhost:8081/remoteEntry.js",
+        },
+        shared: [],
+      })
+    );
 
-  webpackDevMiddleware: (config) => {
-    // Perform customizations to webpack dev middleware config
-    // Important: return the modified config
     return config;
   },
 };

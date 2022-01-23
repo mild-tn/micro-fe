@@ -1,3 +1,4 @@
+// @ts-nocheck
 const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
@@ -18,6 +19,8 @@ const devConfig = {
       filename: 'remoteEntry.js',
       exposes: {
         './ButtonPrimary': './src/components/Buttons/primary',
+        './ButtonType': './src/components/Buttons/button_type',
+        './Input': './src/components/Input/primary',
       },
       shared: packageJson.dependencies,
     }),

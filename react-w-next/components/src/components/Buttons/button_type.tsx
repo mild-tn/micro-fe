@@ -1,6 +1,6 @@
 import { ReactChild } from 'react';
 
-export interface PrimaryProps {
+export default interface PrimaryProps {
   children?: ReactChild;
   onClick: () => void;
 }

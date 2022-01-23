@@ -1,9 +1,13 @@
+//@ts-ignore
 const path = require('path');
+//@ts-ignore
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+//@ts-ignore
 module.exports = {
   entry: './src/index.js',
   output: {
+    //@ts-ignore
     path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js',
     publicPath: 'http://localhost:8081/',
