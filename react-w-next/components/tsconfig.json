@@ -1,19 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "allowJs": true,
-    "lib": ["es6", "dom"],
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": false,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
     "sourceMap": true,
     "strict": true,
     "jsx": "react"
   },
-  "include": ["index.d.ts", "src/**/*.tsx"]
+  "include": ["src/**/*.tsx", "src/**/*.ts"]
 }

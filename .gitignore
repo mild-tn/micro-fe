@@ -3,3 +3,5 @@ dist
 .DB_Store
 **/.DS_Store
 .next
+types
+react-w-next/components/.wp_federation

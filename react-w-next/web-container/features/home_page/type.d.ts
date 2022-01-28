@@ -1,13 +1,8 @@
 /// <reference types="react" />
 
-declare module "components/Input" {
-  const Input: React.ComponentType;
-
-  export default Input;
-}
-
-declare module "components/ButtonPrimary" {
-  const Button: React.ComponentType;
+import { ButtonProps } from "../../types/app2/Button";
+declare module "app2/Button" {
+  const Button: React.ComponentProps<ButtonProps>;
 
   export default Button;
 }

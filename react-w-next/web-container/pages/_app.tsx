@@ -2,11 +2,11 @@ import "../styles/tailwind.css";
 import "tailwindcss/tailwind.css";
 import React, { Fragment } from "react";
 
-import App from "next/app";
+import App, { AppContext } from "next/app";
 import Head from "next/head";
 import { appWithTranslation } from "next-i18next";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: any) {
   //---------------------
   //  RENDER
   //---------------------
@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-MyApp.getInitialProps = async (appContext) => {
+MyApp.getInitialProps = async (appContext: AppContext) => {
   const appProps = await App.getInitialProps(appContext);
   return { ...appProps };
 };

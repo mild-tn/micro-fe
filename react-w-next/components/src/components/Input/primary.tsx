@@ -1,11 +1,6 @@
 import React from 'react';
 import '../../styles/tailwind.css';
-
-interface InputProps {
-  typeInput: string;
-  value: string | number;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-}
+import { InputProps } from './input_type';
 
 const Input = ({ typeInput, onChange, value }: InputProps) => {
   //---------------------
