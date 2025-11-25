@@ -24,3 +24,15 @@
 #### Books
 
 - [Micro Frontends in Action](https://livebook.manning.com/book/micro-frontends-in-action/chapter-1/31)
+
+### How to start micro front-end?
+
+1. run `yarn install` in packages/auth or packages/container or packages/marketing and packages/dashboard folder
+2. run `yarn start` in each folder which are under of packages folder 
+
+or run `docker-compose up` in packages folder
+
+Note:
+- run `docker-compose down --remove-orphans` to remove old container
+- run `docker-compose build` to build image
+- run `docker-compose up` to start container
