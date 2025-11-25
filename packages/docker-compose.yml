@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  container:
+    build:
+      context: ./container
+    container_name: mfe-container
+    ports:
+      - "8000:8000"
+    working_dir: /app
+    depends_on:
+      - marketing
+      - auth
+      # - dashboard
+
+  marketing:
+    build:
+      context: ./marketing
+    container_name: mfe-marketing
+    ports:
+      - "8081:8081"
+    working_dir: /app
+
+  auth:
+    build:
+      context: ./auth
+    container_name: mfe-auth
+    ports:
+      - "8082:8082"
+    working_dir: /app
+
+  # dashboard:
+  #   build:
+  #     context: ./dashboard
+  #   container_name: mfe-dashboard
+  #   ports:
+  #     - "8083:8083"
+  #   volumes:
+  #     - ./dashboard:/app
+  #     - /app/node_modules
+  #   working_dir: /app
+
+networks:
+  default:
+    driver: bridge
