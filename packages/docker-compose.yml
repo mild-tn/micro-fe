@@ -7,11 +7,12 @@ services:
     container_name: mfe-container
     ports:
       - "8000:8000"
-    working_dir: /app
+    networks:
+      - mfe-net
     depends_on:
       - marketing
       - auth
-      # - dashboard
+      - dashboard
 
   marketing:
     build:
@@ -19,7 +20,8 @@ services:
     container_name: mfe-marketing
     ports:
       - "8081:8081"
-    working_dir: /app
+    networks:
+      - mfe-net
 
   auth:
     build:
@@ -27,19 +29,18 @@ services:
     container_name: mfe-auth
     ports:
       - "8082:8082"
-    working_dir: /app
+    networks:
+      - mfe-net
 
-  # dashboard:
-  #   build:
-  #     context: ./dashboard
-  #   container_name: mfe-dashboard
-  #   ports:
-  #     - "8083:8083"
-  #   volumes:
-  #     - ./dashboard:/app
-  #     - /app/node_modules
-  #   working_dir: /app
+  dashboard:
+    build:
+      context: ./dashboard
+    container_name: mfe-dashboard
+    ports:
+      - "8083:8083"
+    networks:
+      - mfe-net
 
 networks:
-  default:
+  mfe-net:
     driver: bridge
